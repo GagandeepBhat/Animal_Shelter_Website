@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animal Shelters</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+  </head>
+  <body>
+    <section class="sub-header">
+      <div class="ab-options">
+        <ul>
+          {% if user.is_authenticated %}
+          <li><a class="login" href="logout"><strong>Logout</a></li>
+          {% else %}
+          <li><a class="login" href="login"><strong>Login/SignUp</a></li>
+          {% endif %}
+          
+          <li><a href="/"><strong>Home</strong></a></li>
+          <li><a href="about"><strong>About</strong></a></li>
+          {% if user.is_authenticated %}
+          <li><a href="services"><strong>Services</strong></a></li>
+          {% else %}
+          <li><a href="login"><strong>Services</strong></a></li>
+          {% endif %}
+          <li><a href="#bottom"><strong>Contact</strong></a></li>
+        </ul>
+      </div>
+    <section class="about-us">
+      <h1>About Us</h1>
+      <p>Our objective is to prevent cruelty to animals and to secure the welfare and proper care of animals in Bangalore city.</p>
+      <div class="row">
+        <div class="aboutus-col">
+          <h3>The grievances of Stray Animals is seldom looked upon. They are involved in Road Accidents which is dangeroud for both the driver and the animal, they defecate everywhere, they scavenge on garbage which can and will lead to illness, they transmit Diseases, some Stray Animals cause disturbance at night. The idea is to spread awareness as to how we can help them simply by looking into the services of an Animal shelters.</h3>
+          <img src="{% static 'accident.jpg' %}">
+          <img src="{% static 'garbage.jpg' %}">
+          <img src="{% static 'shelter.jpg' %}">
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <a name="bottom"></a>
+      <h2>Contact us</h2>
+      <ul>
+        <li><a href="">+1234567890</a></li>
+        <li><a href="">abcd@gmail.com</a></li>
+        <li><a href="">twitter.com/abcd</a></li>
+      </ul>
+    </section>
+  </body>
+</html>

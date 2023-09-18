@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animal Shelters</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+  </head>
+  <body>
+    <section class="header">
+      <div class="options">
+        <ul>
+          {% if user.is_authenticated %}
+          <li><a class="login" href="logout"><strong>Logout</a></li>
+          {% else %}
+          <li><a class="login" href="login"><strong>Login/SignUp</a></li>
+          {% endif %}
+          
+          
+          <li><a href=""><strong>Home</strong></a></li>
+          <li><a href="about"><strong>About</strong></a></li>
+          {% if user.is_authenticated %}
+          <li><a href="services"><strong>Services</strong></a></li>
+          {% else %}
+          <li><a href="login"><strong>Services</strong></a></li>
+          {% endif %}
+          <li><a href="#contacts"><strong>Contact</strong></a></li>
+        </ul>
+      </div>
+      <div class="title">
+        {% if user.is_authenticated %}
+          <p><strong>Welcome,{{user.username}}</strong></p><br><br>
+          {% else %}
+          <p><strong></strong></p>
+          {% endif %}
+
+        <h1>ANIMAL SHELTERS</h1>
+        <p>Animals are a gift from above.</p>
+      </div>
+    </section>
+    <section class="services">
+      <h1>Services We Offer</h1>
+      <p>Here are a list of Services we offer</p>
+      <div class="row">
+        <div class="serv-col">
+          <h3>Adoption</h3>
+          <p>Applying for adoption for pets could be a hectic process if it has to be done in person, but with our help it can be done online which is much eaier. Any Users can apply for adoption for different animal shelters.</p>
+          <img src="{% static 'adopt.jpg' %}">
+        </div>
+        <div class="serv-col">
+          <h3>Volunteering</h3>
+          <p>There are the people with a huge heart that want to volunteer but do not know how to or where to apply ,we help users to apply for volunteering at different animal shelters of their choice.</p>
+          <img src="{% static 'VolunteerHands.jpg' %}">
+        </div>
+        <div class="serv-col">
+          <h3>Ease of Access</h3>
+          <p>Providing easy access to all the information (such as Name, Address, Contacts etc) about individual animal shelters in Bangalore.</p>
+          <img src="{% static 'shelterpic.jpg' %}">
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <h1>About Us</h1>
+      <p>Our objective is to prevent cruelty to animals and to secure the welfare and proper care of animals in Bangalore city.</p>
+      <div class="row">
+        <div class="about-col">
+          <h3>The grievances of Stray Animals is seldom looked upon. They are involved in Road Accidents which is dangeroud for both the driver and the animal, they defecate everywhere, they scavenge on garbage which can and will lead to illness, they transmit Diseases, some Stray Animals cause disturbance at night. The idea is to spread awareness as to how we can help them simply by looking into the services of an Animal shelters.</h3>
+          <img src="{% static 'accident.jpg' %}">
+          <img src="{% static 'garbage.jpg' %}">
+          <img src="{% static 'shelter.jpg' %}">
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <a name="contacts"></a>
+      <h2>Contact us</h2>
+      <ul>
+        <li><a href="">+1234567890</a></li>
+        <li><a href="">abcd@gmail.com</a></li>
+        <li><a href="">twitter.com/abcd</a></li>
+      </ul>
+    </section>
+  </body>
+</html>

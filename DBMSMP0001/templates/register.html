@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SignUp</title>
+        <link rel="stylesheet" href="{% static 'style2.css' %}">
+    </head>
+    <style>
+       body {
+        background-color: burlywood;
+       }
+    </style>
+    <body>
+        <div class="signup">
+            <h1>SignUp</h1>
+        {% for message in messages %}
+    
+        <h5>{{message}}</h5>
+        {% endfor %}
+        <form method="POST" action="register">
+        {% csrf_token %}
+        {{formreg.as_p}}
+       <!-- <p> Username:</p>
+        <input type="text" name="username"/>
+        <p> Email:</p>
+        <input type="email" name="email"/>
+        <p> Password:</p>
+        <input type="password" name="password"/>
+        <p> Confirm Password:</p>
+        <input type="password" name="password2"/><br><br>-->
+        <input type="submit"/>
+        </form>
+        <p>Already have an account? <a href="login">Login</a></p>
+        </div>
+    </body>
+</html>

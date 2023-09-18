@@ -1,0 +1,403 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.header{
+  height: 100vh;
+  background-image: url(pets.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.login{
+  text-align: right;
+  position: absolute;
+  top:40px;
+  right: 100px;
+}
+
+/*-----------------------------------------------------------------------options-----------*/
+
+.options{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+
+.options ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 40px 12px;
+}
+
+.options ul li a{
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(100, 68, 27);
+  padding: 10px 25px;
+  border: none;
+  transition: 0.6s ease;
+  display:block
+}
+
+.options ul li a:hover{
+  background-color: rgb(100, 68, 27);
+  color:white;
+}
+
+/*---------------------------------------------------------------------------title-----------*/
+
+.title{
+  font-family: sans-serif;
+  width: 90%;
+  color: rgb(100, 68, 27);
+  position: absolute;
+  top:35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.title h1{
+  font-size: 70px;
+}
+.title p{
+  font-size: 20px;
+}
+
+/*-------------------------------------------------------------------------services-----------*/
+
+.services {
+  background-color: burlywood;
+  font-family: sans-serif;
+  width: 100%;
+  margin:auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.services h1 {
+  color: rgb(100, 68, 27);
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.services p{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.serv-col {
+  flex-basis: 31%;
+  background: rgb(233, 220, 205);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+.serv-col h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.serv-col img{
+  object-fit: cover;
+}
+.serv-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/*--------------------------------------------------------------------------about-----------*/
+
+.about{
+  background-color: burlywood;
+  font-family: sans-serif;
+  width: 100%;
+  margin:auto;
+  text-align: center;
+  padding-top: 50px;
+  color: rgb(100, 68, 27);
+}
+
+.about h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+.about p{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.about-col 
+{
+  flex-basis: 90%;
+  background: rgb(233, 220, 205);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  margin-left: 91px;
+}
+
+.about-col h3{
+  text-align: center;
+  font-weight: 600;
+}
+
+.about-col img{
+  margin-top: 25px;
+  margin-right: 10px;
+}
+
+/*----------------------------------------------------------------------------footer-----------*/
+
+.footer{
+  width:100%;
+  text-align:center;
+  padding:30px 0;
+  background-color: rgb(100, 68, 27);
+}
+
+.footer h2{
+  font-family: sans-serif;
+  color: white;
+  margin-bottom: 25px;
+  margin-top:20px;
+  font-weight: 600;
+}
+
+.footer li{
+  font-family: sans-serif;
+  display: flex;
+  padding: 2% 5%;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+}
+
+.footer ul li a{
+  color: white;
+}
+
+/*-------------------------------------------------------------------------------about page-----------*/
+
+.sub-header{
+  height: 50vh;
+  width: 100%;
+}
+
+.ab-options{
+  background-color: rgb(100, 68, 27);
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+
+.ab-options ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 40px 12px;
+}
+
+.ab-options ul li a{
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: beige;
+  padding: 10px 25px;
+  transition: 0.6s ease;
+  border-radius: 10px;
+}
+.ab-options ul li a:hover{
+  background-color: burlywood;
+  color:rgb(100, 68, 27);
+}
+
+
+.about-us {
+  background-color: burlywood;
+  color: rgb(100, 68, 27);
+  font-family: sans-serif;
+  width: 100%;
+  text-align: left;
+  padding-top: 5%;
+}
+
+.about-us h1{
+  font-size: 36px;
+  font-weight: 600;
+  margin-left: 100px;
+}
+.about-us p{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  margin-left: 98px;
+  padding-bottom: 0px;
+}
+
+.aboutus-col 
+{
+  flex-basis: 90%;
+  background: rgb(233, 220, 205);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  margin-left: 91px;
+}
+
+.aboutus-col h3{
+  text-align: center;
+  font-weight: 600;
+}
+
+.aboutus-col img{
+  margin-top: 25px;
+  margin-right: 10px;
+}
+
+/*-------------------------------------------------------------------------Login/SignUp-------------------------*/
+
+.log {
+  width: 90%;
+  color: rgb(100, 68, 27);
+  position: absolute;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.log h1{
+  margin: 30px;
+}
+
+.log h3{
+  margin: 17px;
+  color: red;
+}
+
+.log p{
+  font-size: 25px;
+  margin: 20px;
+}
+
+.log input{
+  font-size: 17px;
+}
+
+.log a{
+  text-decoration: none;
+  color: rgb(100, 68, 27);
+  padding: 10px 25px;
+  border: none;
+  transition: 0.6s ease;
+  border-radius: 40px;
+}
+
+.log a:hover{
+  background-color: rgb(100, 68, 27);
+  color:white;
+}
+
+.signup {
+  width: 90%;
+  color: rgb(100, 68, 27);
+  position: absolute;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.signup h1{
+  margin: 30px;
+}
+
+.signup h3{
+  margin: 17px;
+  color: red;
+}
+
+.signup p{
+  font-size: 25px;
+  margin: 20px;
+}
+
+.signup input{
+  font-size: 17px;
+}
+
+.signup a{
+  text-decoration: none;
+  color: rgb(100, 68, 27);
+  padding: 10px 25px;
+  border: none;
+  transition: 0.6s ease;
+  border-radius: 40px;
+}
+
+.signup a:hover{
+  background-color: rgb(100, 68, 27);
+  color:white;
+}
+
+/*--------------------------------------------------------------------------services page-----------*/
+
+.servs{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.servs ul li{
+  font-size: 50px;
+  list-style: none;
+  padding: 30px 30px;
+}
+
+.servs ul li a{
+  text-decoration: none;
+  color: rgb(100, 68, 27);
+  padding: 10px 25px;
+  border: none;
+  transition: 0.6s ease;
+  display:block;
+  border-radius: 40px;
+}
+
+.servs ul li a:hover{
+  background-color: rgb(100, 68, 27);
+  color:white;
+}
+
+/*--------------------------------------------------------------------------shelters page-----------*/
+

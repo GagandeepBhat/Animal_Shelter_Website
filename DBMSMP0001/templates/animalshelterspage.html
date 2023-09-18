@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+      	<title>Shelters</title>
+				<link rel="stylesheet" href="{% static 'style2.css' %}">
+				<style>
+					body{
+						background-color: burlywood;
+					}
+
+					.shelt {
+  					color: rgb(100, 68, 27);
+  					font-family: sans-serif;
+ 						width: 100%;
+					}
+
+					.shelt h1{
+						color: black;
+  					text-align: center;
+   					font-size: 60px;
+  					font-weight: 600;
+  					margin-bottom: 2%;
+						margin-top: 2%;
+					}
+
+					.shelt th, td, tr{
+						border: 2px solid black;
+						border-radius: 5px;
+					}
+					.shelt table{
+						width: 97%;
+					}
+					
+					.shelt th{
+						background-color: brown;
+						color: black;
+						padding: 0.5% 0.5%;
+						font-size: 20px;
+					}
+
+					.shelt td{
+						padding: 0.08% 0.08%;
+						text-align: left;
+					}
+				</style>
+    </head>
+		<body>
+				<div class="ab-options">
+					<ul>
+						<li><a href="/"><strong>Home</strong></a></li>
+					</ul>
+				</div>
+				<div class="shelt">
+					<h1><stron>Animal Shelters</stron></h1>
+					<center>
+						<table>
+							<tr>
+								<th>Shelter Name</th>
+								<th>Contact</th>
+								<th>Address</th>
+							</tr>
+							{% for animshel in animshels %}
+							<tr>
+								<td>{{animshel.name}}</td>
+								<td>{{animshel.contact}}</td>
+								<td>{{animshel.address}}</td>
+							</tr>
+							{% endfor %}
+						</table>
+					</center>
+				</div>
+		</body>
+</html>
